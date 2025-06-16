@@ -115,6 +115,11 @@ export const routes = [
         component: () => import("@/pages/App20-加载kmz数据.vue"),
         meta: { title: "加载kmz数据", },
       },
+      {
+        path: "/app21",
+        component: () => import("@/pages/App21-加载czml数据.vue"),
+        meta: { title: "加载czml数据", },
+      },
     ],
   },
 ];

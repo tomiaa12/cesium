@@ -27,13 +27,42 @@ onMounted(async () => {
   })
 
 
-  // 加载kmz数据（就是kml的压缩文件）
-  let kmlUrl = "./Assets/gdpPerCapita2008.kmz";
-  let kmlDataPromise = Cesium.KmlDataSource.load(kmlUrl);
-  console.log(kmlDataPromise);
-  kmlDataPromise.then(function (dataSource) {
+  // 加载kml数据
+  // const czml = [
+  //   {
+  //     id: "document",
+  //     name: "box",
+  //     version: "1.0",
+  //   },
+  //   {
+  //     id: "shape1",
+  //     name: "Blue box",
+  //     position: {
+  //       cartographicDegrees: [-114.0, 40.0, 300000.0],
+  //     },
+  //     box: {
+  //       dimensions: {
+  //         cartesian: [400000.0, 300000.0, 500000.0],
+  //       },
+  //       material: {
+  //         solidColor: {
+  //           color: {
+  //             rgba: [0, 0, 255, 255],
+  //           },
+  //         },
+  //       },
+  //     },
+  //   },
+  // ];
+
+  let czmlUrl = "./Assets/box.czml";
+
+  // 加载czml数据
+  let promiseData = Cesium.CzmlDataSource.load(czmlUrl);
+  promiseData.then((dataSource) => {
     console.log(dataSource);
     viewer.dataSources.add(dataSource);
+    viewer.flyTo(dataSource);
   });
 })
 

@@ -27,7 +27,7 @@ onMounted(async () => {
   })
 
 
-  // 加载kml数据
+  // 加载kml数据  谷歌数据标准
   let kmlUrl = "./Assets/facilities1.kml";
   let kmlDataPromise = Cesium.KmlDataSource.load(kmlUrl, {
     camera: viewer.scene.camera,
