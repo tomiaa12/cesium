@@ -95,6 +95,26 @@ export const routes = [
         component: () => import("@/pages/App16-primitive材质.vue"),
         meta: { title: "Primitive材质", },
       },
+      {
+        path: "/app17",
+        component: () => import("@/pages/App17-着色器自定义材质.vue"),
+        meta: { title: "着色器自定义材质", },
+      },
+      {
+        path: "/app18",
+        component: () => import("@/pages/App18-加载GeoJson数据.vue"),
+        meta: { title: "加载GeoJson数据", },
+      },
+      {
+        path: "/app19",
+        component: () => import("@/pages/App19-加载kml数据.vue"),
+        meta: { title: "加载kml数据", },
+      },
+      {
+        path: "/app20",
+        component: () => import("@/pages/App20-加载kmz数据.vue"),
+        meta: { title: "加载kmz数据", },
+      },
     ],
   },
 ];
