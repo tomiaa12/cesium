@@ -29,12 +29,17 @@ onMounted(async () => {
 
 
     // 添加地形
-    terrainProvider: await Cesium.createWorldTerrainAsync(),
-    // terrainProvider: new Cesium.CesiumTerrainProvider({
-    //   url: "./terrains/gz",
-    // }),
+    terrainProvider: await Cesium.createWorldTerrainAsync({
+      // 水面波浪效果
+      requestWaterMask: true,
+      // 光照阴影效果
+      requestVertexNormals: true
+    }),
 
-    
+    // 自定义地形数据下载(tif格式) https://www.gscloud.cn/sources/accessdata/305?pid=302
+    // 下载cesiumlab软件，转换数据http://cesiumlab.com/cesiumlab.html，安装后打开浏览器页面，地形切片-》输入文件-》三角算法vcg-》输出文件 散列-》保存
+    // 自定义地形数据
+    // terrainProvider: await Cesium.CesiumTerrainProvider.fromUrl("./terrains/gz"),
 
   });
 
@@ -48,4 +53,3 @@ onMounted(async () => {
   width: 100%;
 }
 </style>
-

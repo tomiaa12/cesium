@@ -3,7 +3,7 @@ import * as Cesium from 'cesium'
 import "../styles/Widgets/widgets.css"
 import { onMounted } from 'vue';
 
-onMounted(() => {
+onMounted(async() => {
   // https://cesium.com/learn/cesiumjs/ref-doc/Viewer.html#.ConstructorOptions
   const viewer = new Cesium.Viewer('cesiumContainer', {
     // 隐藏 logo
