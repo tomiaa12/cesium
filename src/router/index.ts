@@ -120,6 +120,31 @@ export const routes = [
         component: () => import("@/pages/App21-加载czml数据.vue"),
         meta: { title: "加载czml数据", },
       },
+      {
+        path: "/app22",
+        component: () => import("@/pages/App22-加载czml时序数据.vue"),
+        meta: { title: "加载czml时序数据", },
+      },
+      {
+        path: "/app23",
+        component: () => import("@/pages/App23-追踪飞机跨洋飞行.vue"),
+        meta: { title: "追踪飞机跨洋飞行", },
+      },
+      {
+        path: "/app24",
+        component: () => import("@/pages/App24-3DTiles与性能监控.vue"),
+        meta: { title: "3DTiles与性能监控", },
+      },
+      {
+        path: "/app25",
+        component: () => import("@/pages/App25-设置3DTiles样式.vue"),
+        meta: { title: "设置3DTiles样式", },
+      },
+      {
+        path: "/app26",
+        component: () => import("@/pages/App26-设置3DTiles样式高级设置.vue"),
+        meta: { title: "设置3DTiles样式高级设置", },
+      },
     ],
   },
 ];

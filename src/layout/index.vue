@@ -24,9 +24,11 @@ import Menus from './Menus.vue'
 
   :deep() {
 
+    .el-main {
+      padding: 0;
+    }
     .el-aside,
     .el-container {
-
       height: 100%;
     }
   }

@@ -27,7 +27,7 @@ onMounted(async () => {
   })
 
 
-  // 加载kml数据
+  // czml 标准 https://github.com/AnalyticalGraphicsInc/czml-writer/wiki/CZML-Guide
   // const czml = [
   //   {
   //     id: "document",
